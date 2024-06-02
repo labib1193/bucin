@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>ade❤️mas</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
   <style>
     body {
       margin: 0;
@@ -153,10 +155,23 @@
       document.querySelector(".page2").classList.add("visible");
     }
 
+    function showPage1() {
+      document.querySelector(".page2").classList.remove("visible");
+      document.querySelector(".page1").classList.add("visible");
+    }
+
     function showPage3() {
       document.querySelector(".page2").classList.remove("visible");
       document.querySelector(".page3").classList.add("visible");
     }
+
+    // Ensure the audio plays after user interaction
+    document.addEventListener('click', function() {
+      var audio = document.getElementById('background-music');
+      if (audio.paused) {
+        audio.play();
+      }
+    });
   </script>
 </body>
 </html>
